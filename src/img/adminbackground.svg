@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF"/>
+  <g fill="#000000">
+    <text x="50" y="100" font-size="60">T</text>
+    <text x="150" y="150" font-size="80">H</text>
+    <text x="250" y="120" font-size="100">E</text>
+    <text x="350" y="160" font-size="70">Q</text>
+    <text x="450" y="110" font-size="90">U</text>
+    <text x="550" y="170" font-size="60">I</text>
+    <text x="650" y="130" font-size="80">C</text>
+    <text x="750" y="150" font-size="70">K</text>
+    <text x="50" y="300" font-size="80">B</text>
+    <text x="150" y="250" font-size="70">R</text>
+    <text x="250" y="290" font-size="90">O</text>
+    <text x="350" y="270" font-size="60">W</text>
+    <text x="450" y="320" font-size="70">N</text>
+    <text x="550" y="250" font-size="80">F</text>
+    <text x="650" y="280" font-size="90">O</text>
+    <text x="750" y="290" font-size="60">X</text>
+  </g>
+</svg>

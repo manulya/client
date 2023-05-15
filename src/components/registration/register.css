@@ -1,0 +1,46 @@
+.register-page {
+  background-image: url("https://img.desktopwallpapers.ru/world/pics/wide/1920x1200/f1dbf077b7977ce562043785dcc1e983.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+a {
+  color: #4CAF50;
+}

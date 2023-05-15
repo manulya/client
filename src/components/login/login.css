@@ -1,0 +1,47 @@
+.login-page {
+    background-image: url("https://cdn.artcenter.by/base/users/11068/works/9YjUGMSyuF.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form {
+    background: rgba(255, 255, 255, 0.719) ;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  button {
+    background-color: #19307a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .message {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  a {
+    color: #19307a;
+  }
+  
