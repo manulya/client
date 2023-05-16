@@ -5,6 +5,7 @@ import AddType from './addType.jsx';
 import AddBrand from './addBrand.jsx';
 import {AddPicture} from './addPicture'
 import backgroundImage from '../../img/adminbackground.svg';
+import FileUploadButton from './upload';
 
 export const Admin = () => {
   return (
@@ -15,6 +16,7 @@ export const Admin = () => {
         <AddPicture/>
         <AddType />
         <AddBrand/>
+        <FileUploadButton/>
       </FormsContainer>
     </AdminContainer>
     </>

@@ -34,7 +34,7 @@ const Login=() =>{
         <form className="login-form" onSubmit={event=>handlerSubmit(event) }>
           <input type="text" placeholder="Логин" value={email} onChange={(event)=>setEmail(event.target.value)}/>
           <input type="password" placeholder="Пароль" value={password} onChange={(event)=>setPassword(event.target.value)}/>
-          <button type ="submit">Войти</button>
+          <button className="btn" type ="submit">Войти</button>
           <p className="message">Нет аккаунта? 
             <NavLink to="/registration"><a> Зарегистрируйтесь</a></NavLink>
           </p>

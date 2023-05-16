@@ -7,6 +7,8 @@ import Header from "../header/header";
 import { fetchPicture, getAllPictures } from "../../http/pictureAPI";
 import { fetchBrands } from "../../http/brandAPI";
 import { fetchTypes } from "../../http/typeAPI";
+import DownloadButtonAll from "../downloadAll";
+import Search_main from "../search_main/search_main";
 
 
 const Catalog = () => {
@@ -14,36 +16,50 @@ const Catalog = () => {
   const found = useSelector((state) => state.picture.found);
   const dispatch = useDispatch();
   const [searchResult, setSearchResult] = useState([]);
-  const [sortPicture, setSortPicture] = useState("");
-  const [pictureCount, setPictureCount] = useState(0);
+  const [sortOrder, setSortOrder] = useState("");
+
 
   const handleSearch = (search,sort) => {
     setSearchResult(search);
-    setSortPicture(sort);
+    console.log("search")
+    setSortOrder(sort);
   };
 
   useEffect(() => {
-    setPictureCount(pictures.length)
-    //dispatch(fetchPicture(searchResult[0], searchResult[1], searchResult[2], sortPicture));
-    dispatch(fetchPicture());
+    console.log(searchResult)
+    dispatch(fetchPicture(searchResult[0], searchResult[1], searchResult[2], sortOrder));
     dispatch(fetchBrands())
     dispatch(fetchTypes())
   }, [
-    dispatch
+    dispatch,
+    setSearchResult,
+    searchResult[0],
+    searchResult[1],
+    searchResult[2],
+    sortOrder
   ]);
-  
+
+ 
   return (
     <Container>
       <Header />
-
+      <SearchContainer>
+        <Search_main onSearch={handleSearch}/>
+        
+      </SearchContainer>
+      <DownloadButtonAll picture={pictures} />
       {!found ? (
-        <Nothing>Ничего не найдено :(</Nothing>
+        <Nothing>Ничего не найдено</Nothing>
       ) : (
+        
+        
         <VacanciesContainer>
+          
           {pictures.map((picture, index) => {
             return <Picture key={index} picture={picture} />;
           })}
         </VacanciesContainer>
+       
       )}
     </Container>
   );
@@ -53,7 +69,7 @@ export default Catalog;
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: auto 0.8fr 2fr;
+  grid-template-rows: auto 0.1fr 0.5fr 2fr;
   min-height: 120vh;
 `;
 const Nothing = styled.h1`
@@ -68,6 +84,7 @@ const VacanciesContainer = styled.div`
   justify-items: center;
   margin-top: 15%;
 `;
+
 const SearchContainer = styled.div`
   margin-top: -100px;
 `;

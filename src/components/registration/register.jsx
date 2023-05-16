@@ -37,7 +37,7 @@ const Registeration=()=>{
           <input type="text" placeholder="Имя пользователя" value={name} onChange={(event)=>setUserName(event.target.value)}/>
           <input type="text" placeholder="Логин" value={email} onChange={(event)=>setUserLogin(event.target.value)}/>
           <input type="password" placeholder="Пароль" value={password} onChange={(event)=>setUserPassword(event.target.value)}/>
-          <button type ="submit">Зарегистрироваться</button>
+          <button className="btn" type ="submit">Зарегистрироваться</button>
           <p className="message">Уже зарегистрированы? <NavLink to="/login"><a>Войдите</a></NavLink></p>
         </form>
       </div>

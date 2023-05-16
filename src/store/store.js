@@ -5,6 +5,7 @@ import { userReducer } from './userReducer';
 import { typeReducer } from './typeReducer';
 import { brandReducer } from './brandReducer';
 import { pictureReducer } from './pictureReducer';
+import { basketReducer } from './basketReducer';
 
 
 
@@ -12,7 +13,8 @@ let rootReducer=combineReducers({
 users:userReducer,
 type:typeReducer,
 brand:brandReducer,
-picture:pictureReducer
+picture:pictureReducer,
+basket:basketReducer
 }
 )
 
